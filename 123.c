@@ -27,6 +27,14 @@ bool ListInsert(SqList *L,int i, int e){
 	L->length++;
 	return true;
 }
+int LocateElem(SqList *L , int e) {
+	for (int i = 0; i < L->length; i++) {
+		if (L->data[i] == e)
+			return i + 1;
+		else if (i == L->length)
+			return 0;
+	}
+}
 bool ListDelete(SqList* L, int i,int *e) {
 	if (i<1 || i>L->length)
 		return false;
@@ -43,6 +51,8 @@ int main()
 	SqList *L=&list;
 	ListInit(L);
 	ListInsert(L, 1, 100);
+	int c = LocateElem(L, 100);
+	printf("输出100的位置为%d",c);
 	int a=0;
 	int *e=&a;
 	ListDelete(L, 1,e);
