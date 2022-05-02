@@ -1,2 +1,2 @@
-# the-insert-and-delete-of-the-Sqlist
+# Sequence List
 顺序表的插入和删除
